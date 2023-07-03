@@ -6,7 +6,7 @@ body {
   overflow-x: hidden;
 }
 
-.image-container {
+.imagee-containerr {
     position: absolute;
     top: 0;
     right: 0;
@@ -17,11 +17,11 @@ body {
 }
 
 .right-image {
-    width: 60%;
+    width: 65%;
     height: auto;
     max-height: 80%;
     margin-top: 150px;
-    margin-left: 100px;
+    margin-left: 110px;
     object-fit: cover;
     pointer-events: none;
     animation: rotate 10s linear infinite;

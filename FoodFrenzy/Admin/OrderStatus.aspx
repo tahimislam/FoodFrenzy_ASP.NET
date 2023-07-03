@@ -65,7 +65,7 @@
                                                                     </asp:Label>
                                                                 </td>
                                                                 <td> <%# Eval("Name") %> </td>
-                                                                <td>$<%# Eval("TotalPrice") %> </td>
+                                                                <td>৳<%# Eval("TotalPrice") %> </td>
                                                                 <td> <%# Eval("PaymentMode") %> </td>
                                                                 <td>
                                                                     <asp:LinkButton ID="lnkEdit" Text="Edit" runat="server" CssClass="badge badge-primary"

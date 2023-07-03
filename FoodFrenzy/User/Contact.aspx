@@ -20,7 +20,7 @@
             height: 400px;
             width: auto;
             margin-right: 100px;
-            margin-top: 150px;
+            margin-top: 100px;
             z-index: -1;
         }
     </style>

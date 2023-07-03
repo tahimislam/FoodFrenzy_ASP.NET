@@ -54,7 +54,7 @@
                             <img alt="" width="60" src="<%# Utils.GetImageUrl(Eval("ImageUrl")) %>" />
                         </td>
 
-                        <td>$
+                        <td>৳
                             <asp:Label ID="lblPrice" runat="server" Text='<%# Eval("Price") %>'></asp:Label>
                             <asp:HiddenField ID="hdnProductId" runat="server" Value='<%# Eval("ProductId") %>' />
                             <asp:HiddenField ID="hdnQuantity" runat="server" Value='<%# Eval("Qty") %>' />
@@ -75,7 +75,7 @@
                             </div>
                         </td>
 
-                        <td>$
+                        <td>৳
                             <asp:Label ID="lblTotalPrice" runat="server"></asp:Label>
                         </td>
 
@@ -95,7 +95,7 @@
                         <td class="pl-lg-5">
                             <b>Grand Total : </b>
                         </td>
-                        <td>$<%Response.Write(Session["grandTotalPrice"]); %></td>
+                        <td>৳<%Response.Write(Session["grandTotalPrice"]); %></td>
                         <td></td>
                     </tr>
                     <tr>

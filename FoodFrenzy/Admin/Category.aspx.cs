@@ -18,7 +18,7 @@ namespace FoodFrenzy.Admin
         DataTable dt;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
                 Session["breadCrum"] = "Category";
                 if (Session["admin"] == null)
@@ -44,7 +44,7 @@ namespace FoodFrenzy.Admin
             cmd.Parameters.AddWithValue("@CategoryId", categoryId);
             cmd.Parameters.AddWithValue("@Name", txtName.Text.Trim());
             cmd.Parameters.AddWithValue("@IsActive", cbIsActive.Checked);
-            if(fuCategoryImage.HasFile)
+            if (fuCategoryImage.HasFile)
             {
                 if (Utils.IsValidExtension(fuCategoryImage.FileName))
                 {
@@ -68,14 +68,14 @@ namespace FoodFrenzy.Admin
                 isValidToExecute = true;
             }
 
-            if(isValidToExecute)
+            if (isValidToExecute)
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 try
                 {
                     con.Open();
                     cmd.ExecuteNonQuery();
-                    actionName=categoryId==0 ? "inserted" : "updated";
+                    actionName = categoryId == 0 ? "inserted" : "updated";
                     lblMsg.Visible = true;
                     lblMsg.Text = "Category " + actionName + " successfully!";
                     lblMsg.CssClass = "alert alert-success";
@@ -86,14 +86,14 @@ namespace FoodFrenzy.Admin
                 {
                     lblMsg.Visible = true;
                     lblMsg.Text = "Error- " + ex.Message;
-                    lblMsg.CssClass= "alert alert-danger";
+                    lblMsg.CssClass = "alert alert-danger";
                 }
-                finally 
-                { 
-                    con.Close(); 
+                finally
+                {
+                    con.Close();
                 }
             }
-            
+
         }
 
         private void getCategories()
@@ -101,9 +101,9 @@ namespace FoodFrenzy.Admin
             con = new SqlConnection(Connection.GetConnectionString());
             cmd = new SqlCommand("Category_Crud", con);
             cmd.Parameters.AddWithValue("@Action", "SELECT");
-            cmd.CommandType= CommandType.StoredProcedure;
+            cmd.CommandType = CommandType.StoredProcedure;
             sda = new SqlDataAdapter(cmd);
-            dt=new DataTable();
+            dt = new DataTable();
             sda.Fill(dt);
             rCategory.DataSource = dt;
             rCategory.DataBind();
@@ -115,7 +115,7 @@ namespace FoodFrenzy.Admin
             cbIsActive.Checked = false;
             hdnId.Value = "0";
             btnAddOrUpdate.Text = "Add";
-            imgCategory.ImageUrl=String.Empty;
+            imgCategory.ImageUrl = String.Empty;
         }
 
         protected void btnClear_Click(object sender, EventArgs e)
@@ -125,9 +125,9 @@ namespace FoodFrenzy.Admin
 
         protected void rCategory_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
-            lblMsg.Visible=false;
+            lblMsg.Visible = false;
             con = new SqlConnection(Connection.GetConnectionString());
-            if (e.CommandName =="edit")
+            if (e.CommandName == "edit")
             {
                 cmd = new SqlCommand("Category_Crud", con);
                 cmd.Parameters.AddWithValue("@Action", "GETBYID");
@@ -138,16 +138,16 @@ namespace FoodFrenzy.Admin
                 sda.Fill(dt);
                 txtName.Text = dt.Rows[0]["Name"].ToString();
                 cbIsActive.Checked = Convert.ToBoolean(dt.Rows[0]["IsActive"]);
-                imgCategory.ImageUrl = string.IsNullOrEmpty(dt.Rows[0]["ImageUrl"].ToString()) ? 
+                imgCategory.ImageUrl = string.IsNullOrEmpty(dt.Rows[0]["ImageUrl"].ToString()) ?
                     "../Images/No_image.png" : "../" + dt.Rows[0]["ImageUrl"].ToString();
                 imgCategory.Height = 200;
                 imgCategory.Width = 200;
                 hdnId.Value = dt.Rows[0]["CategoryId"].ToString();
                 btnAddOrUpdate.Text = "Update";
-                LinkButton btn=e.Item.FindControl("lnkEdit") as LinkButton;
+                LinkButton btn = e.Item.FindControl("lnkEdit") as LinkButton;
                 btn.CssClass = "badge badge-warning";
             }
-            else if(e.CommandName=="delete")
+            else if (e.CommandName == "delete")
             {
                 cmd = new SqlCommand("Category_Crud", con);
                 cmd.Parameters.AddWithValue("@Action", "DELETE");
@@ -177,10 +177,10 @@ namespace FoodFrenzy.Admin
 
         protected void rCategory_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
-            if(e.Item.ItemType==ListItemType.Item || e.Item.ItemType==ListItemType.AlternatingItem)
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
-                Label lbl=e.Item.FindControl("lblIsActive") as Label;
-                if(lbl.Text=="True")
+                Label lbl = e.Item.FindControl("lblIsActive") as Label;
+                if (lbl.Text == "True")
                 {
                     lbl.Text = "Active";
                     lbl.CssClass = "badge badge-success";

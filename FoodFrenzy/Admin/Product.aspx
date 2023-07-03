@@ -73,7 +73,7 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <lebel>Product Price($)</lebel>
+                                                    <lebel>Product Price(৳)</lebel>
                                                     <div>
                                                         <asp:TextBox ID="txtPrice" runat="server" CssClass="form-control"
                                                             placeholder="Enter Product Price" ></asp:TextBox>
@@ -158,7 +158,7 @@
                                                                 <tr>
                                                                     <th class="table-plus">Name</th>
                                                                     <th>Image</th>
-                                                                    <th>Price($)</th>
+                                                                    <th>Price</th>
                                                                     <th>Qty</th>
                                                                     <th>Category</th>
                                                                     <th>IsActive</th>
@@ -177,7 +177,7 @@
                                                                     <img alt="" width="40" src="<%# Utils.GetImageUrl(Eval("ImageUrl")) %>" />
                                                                 </td>
 
-                                                                <td> <%# Eval("Price") %> </td>
+                                                                <td> ৳<%# Eval("Price") %> </td>
 
                                                                 <td> 
                                                                     <asp:Label ID="lblQuantity" runat="server" Text='<%# Eval("Quantity") %>'></asp:Label>

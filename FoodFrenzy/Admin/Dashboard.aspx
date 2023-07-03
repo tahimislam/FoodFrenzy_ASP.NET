@@ -20,7 +20,7 @@
                                                     <h4>45</h4>
                                                     <div>
                                                         <span class="f-left m-t-10 text-muted">
-                                                            <i class="text-c-blue f-16 icofont icofont-plus m-r-10"></i>All Categories
+                                                            <i class="text-c-blue f-16 icofont icofont-listing-number m-r-10"></i>All Categories
                                                         </span>
                                                     </div>
                                                 </div>
@@ -71,7 +71,7 @@
                                             <div class="card-block-small">
                                                 <i class="icofont icofont-users-social bg-c-yellow card1-icon"></i>
                                                 <span class="text-c-yellow f-w-600">Users</span>
-                                                <h4>100+</h4>
+                                                <h4>1000+</h4>
                                                 <div>
                                                     <span class="f-left m-t-10 text-muted">
                                                         <i class="text-c-yellow f-16 icofont icofont-users m-r-10"></i>Customers

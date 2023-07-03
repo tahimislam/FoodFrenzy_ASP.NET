@@ -1,8 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SliderUserControl.ascx.cs" Inherits="FoodFrenzy.User.SliderUserControl" %>
 
-<div class="image-container">
+<%--<div class="imagee-containerr">
     <img src="../Images/f3.png" alt="pizza" class="right-image">
-</div>
+</div>--%>
 
 <!-- slider section -->
 <section class="slider_section ">

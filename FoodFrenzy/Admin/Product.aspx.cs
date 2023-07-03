@@ -116,7 +116,7 @@ namespace FoodFrenzy.Admin
         {
             txtName.Text = string.Empty;
             txtDescription.Text = string.Empty;
-            txtPrice.Text = string.Empty; 
+            txtPrice.Text = string.Empty;
             txtQuantity.Text = string.Empty;
             ddlCategories.ClearSelection();
             cbIsActive.Checked = false;
@@ -203,9 +203,9 @@ namespace FoodFrenzy.Admin
                     lblIsActive.CssClass = "badge badge-danger";
                 }
 
-                if(Convert.ToInt32(lblQuantity.Text) <=5)
+                if (Convert.ToInt32(lblQuantity.Text) <= 5)
                 {
-                    lblQuantity.CssClass= "badge badge-danger";
+                    lblQuantity.CssClass = "badge badge-danger";
                     lblQuantity.ToolTip = "Item about to be Out of Stock!";
                 }
             }

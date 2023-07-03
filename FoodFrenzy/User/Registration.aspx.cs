@@ -24,7 +24,7 @@ namespace FoodFrenzy.User
         {
             if (!IsPostBack)
             {
-                if (Request.QueryString["id"]!=null) //&& Session["userId"]!=null
+                if (Request.QueryString["id"]!=null)
                 {
                     getUserDetails();
                 }

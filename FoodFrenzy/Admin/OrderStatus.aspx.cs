@@ -101,7 +101,7 @@ namespace FoodFrenzy.Admin
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            pUpdateOrderStatus.Visible=false;
+            pUpdateOrderStatus.Visible = false;
         }
     }
 }

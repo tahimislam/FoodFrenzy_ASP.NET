@@ -74,6 +74,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AdContact.aspx" />
     <Content Include="Admin\Category.aspx" />
     <Content Include="Admin\Dashboard.aspx" />
     <Content Include="Admin\OrderStatus.aspx" />
@@ -216,6 +217,7 @@
     <Content Include="assets\pages\widget\amchart\worldLow.js" />
     <Content Include="assets\pages\widget\amchart\worldLow.min.js" />
     <Content Include="Global.asax" />
+    <Content Include="Images\bgpass.png" />
     <Content Include="Images\chef.png" />
     <Content Include="Images\f3.png" />
     <Content Include="Images\login.png" />
@@ -228,6 +230,7 @@
     <Content Include="User\Cart.aspx" />
     <Content Include="User\Contact.aspx" />
     <Content Include="User\Default.aspx" />
+    <Content Include="User\ForgotPass.aspx" />
     <Content Include="User\Invoice.aspx" />
     <Content Include="User\Login.aspx" />
     <Content Include="User\Menu.aspx" />
@@ -238,6 +241,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AdContact.aspx.cs">
+      <DependentUpon>AdContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdContact.aspx.designer.cs">
+      <DependentUpon>AdContact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -313,6 +323,13 @@
     <Compile Include="User\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="User\ForgotPass.aspx.cs">
+      <DependentUpon>ForgotPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ForgotPass.aspx.designer.cs">
+      <DependentUpon>ForgotPass.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User\Invoice.aspx.cs">
       <DependentUpon>Invoice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -376,7 +393,6 @@
     <Content Include="All_Files\fonts\fontawesome-webfont.ttf" />
     <Content Include="All_Files\fonts\fontawesome-webfont.woff" />
     <Content Include="All_Files\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Admin\Admin.Master" />
     <Content Include="assets\icon\icofont\fonts\icofont.eot" />
     <Content Include="assets\icon\icofont\fonts\icofont.ttf" />
     <Content Include="assets\icon\icofont\fonts\icofont.woff" />
@@ -387,6 +403,7 @@
     <Content Include="assets\datatables\fonts\ionicons.woff" />
     <Content Include="assets\datatables\fonts\themify.ttf" />
     <Content Include="assets\datatables\fonts\themify.woff" />
+    <Content Include="Admin\Admin.Master" />
     <None Include="packages.config" />
     <Content Include="User\User.Master" />
     <None Include="Web.Debug.config">

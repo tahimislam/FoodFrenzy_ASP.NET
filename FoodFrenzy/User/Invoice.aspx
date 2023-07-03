@@ -55,7 +55,7 @@
                         </td>
 
                         <td>
-                            <%# string.IsNullOrEmpty(Eval("Price").ToString()) ? "" : "$"+Eval("Price") %>
+                            <%# string.IsNullOrEmpty(Eval("Price").ToString()) ? "" : "৳"+Eval("Price") %>
                         </td>
 
                         <td>
@@ -63,7 +63,7 @@
                         </td>
 
                         <td>
-                            $<%# Eval("TotalPrice") %>
+                            ৳<%# Eval("TotalPrice") %>
                         </td>
                     </tr>
                 </ItemTemplate>

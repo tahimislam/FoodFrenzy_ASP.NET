@@ -184,7 +184,7 @@
                                                                     </td>
 
                                                                     <td>
-                                                                        <asp:Label ID="Label1" runat="server" Text='<%# string.IsNullOrEmpty(Eval("Price").ToString()) ? "" : "$" + Eval("Price") %>'></asp:Label>
+                                                                        <asp:Label ID="Label1" runat="server" Text='<%# string.IsNullOrEmpty(Eval("Price").ToString()) ? "" : "৳" + Eval("Price") %>'></asp:Label>
                                                                     </td>
 
                                                                     <td>
@@ -192,7 +192,7 @@
                                                                     </td>
 
                                                                     <td>
-                                                                        $<asp:Label ID="Label3" runat="server" Text='<%# Eval("TotalPrice") %>'></asp:Label>
+                                                                        ৳<asp:Label ID="Label3" runat="server" Text='<%# Eval("TotalPrice") %>'></asp:Label>
                                                                     </td>
 
                                                                     <td>

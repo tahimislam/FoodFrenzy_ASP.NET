@@ -216,7 +216,7 @@
                                 <div class="pcoded-navigatio-lavel" data-i18n="nav.category.other">User's Feedback/Query</div>
                                 <ul class="pcoded-item pcoded-left-item">
                                     <li>
-                                        <a href="#">
+                                        <a href="AdContact.aspx">
                                             <span class="pcoded-micon"><i class="ti-direction-alt"></i><b>M</b></span>
                                             <span class="pcoded-mtext" data-i18n="nav.menu-levels.main">Contact</span>
                                             <span class="pcoded-mcaret"></span>
@@ -228,7 +228,7 @@
                                 <div class="pcoded-navigatio-lavel" data-i18n="nav.category.other">Reports</div>
                                 <ul class="pcoded-item pcoded-left-item">
                                     <li>
-                                        <a href="#">
+                                        <a href="OrderStatus.aspx">
                                             <span class="pcoded-micon"><i class="ti-direction-alt"></i><b>M</b></span>
                                             <span class="pcoded-mtext" data-i18n="nav.menu-levels.main">Selling Report</span>
                                             <span class="pcoded-mcaret"></span>

@@ -10,6 +10,11 @@
   <section class="offer_section layout_padding-bottom">
     <div class="offer_container">
       <div class="container ">
+      <div class="heading_container heading_center psudo_white_primary mb_45">
+        <h2>
+          Our Categories
+        </h2>
+      </div>
         <div class="row">
             <asp:Repeater ID="rCategory" runat="server">
                 <ItemTemplate>
