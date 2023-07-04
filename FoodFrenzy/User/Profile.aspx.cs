@@ -18,6 +18,7 @@ namespace FoodFrenzy.User
         DataTable dt;
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!IsPostBack)
             {
                 if (Session["userId"] == null)

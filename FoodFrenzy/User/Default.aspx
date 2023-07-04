@@ -161,7 +161,7 @@
                 </p>
               </div>
               <div class="img-box">
-                <img src="../All_files/images/a.png" alt="" class="box-img">
+                <img src="../All_files/images/tahim.jpg" alt="" class="box-img">
               </div>
             </div>
           </div>
@@ -169,17 +169,19 @@
             <div class="box">
               <div class="detail-box">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                  I have been impressed with the delightful taste and impeccable 
+                    packaging of the food I ordered online. The flavors are exquisite, 
+                    leaving me satisfied and craving for more. 
                 </p>
                 <h6>
-                  Mike Hamell
+                  Md Mainul Islam
                 </h6>
                 <p>
-                  magna aliqua
+                  Khulna, Bangladesh
                 </p>
               </div>
               <div class="img-box">
-                <img src="../All_files/images/b.jpg" alt="" class="box-img">
+                <img src="../All_files/images/mainul.jpg" alt="" class="box-img">
               </div>
             </div>
           </div>

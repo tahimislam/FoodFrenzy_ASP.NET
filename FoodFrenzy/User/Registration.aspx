@@ -122,6 +122,10 @@
                             <asp:RequiredFieldValidator ID="rfvPassword" runat="server"
                                 ErrorMessage="Password is required" ControlToValidate="txtPassword"
                                 ForeColor="Red" Display="Dynamic" SetFocusOnError="true" Font-Size="Small"></asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="revPassword" runat="server"
+                                ErrorMessage="Password must be at least 6 characters long"
+                                ControlToValidate="txtPassword" ForeColor="Red" Display="Dynamic"
+                                ValidationExpression="^.{6,}$" Font-Size="Small"></asp:RegularExpressionValidator>
                             <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control"
                                 placeholder="Enter Password" ToolTip="Password" TextMode="Password"></asp:TextBox>
 

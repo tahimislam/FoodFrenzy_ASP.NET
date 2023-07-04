@@ -17,7 +17,41 @@ namespace FoodFrenzy.User
         DataTable dt;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["userId"]!=null)
+            string userId;
+            // Check if the cookie exists
+            if (Request.Cookies["FoodFrenzyLogin"] != null)
+            {
+                // Retrieve the cookie value
+                string cookieValue = Request.Cookies["FoodFrenzyLogin"].Value;
+
+                // Split the cookie value and retrieve the data
+                // (assuming the format is "username=value&userId=value")
+                string[] keyValuePairs = cookieValue.Split('&');
+
+                // Create a dictionary to store the key-value pairs
+                Dictionary<string, string> cookieData = new Dictionary<string, string>();
+
+                // Iterate over the key-value pairs and store them in the dictionary
+                foreach (string pair in keyValuePairs)
+                {
+                    string[] keyValue = pair.Split('=');
+                    string key = keyValue[0];
+                    string value = keyValue[1];
+                    cookieData[key] = value;
+                }
+
+                // Retrieve the username and userId from the dictionary
+                string username = cookieData["username"];
+                userId = cookieData["userId"];
+
+                // Use the retrieved values as needed
+            }
+            else
+            {
+                userId = null;
+            }
+
+            if (Session["userId"]!=null || userId!=null)
             {
                 Response.Redirect("Default.aspx");
             }
@@ -50,6 +84,18 @@ namespace FoodFrenzy.User
                     {
                         Session["username"] = txtUsername.Text.Trim();
                         Session["userId"] = dt.Rows[0]["UserId"];
+
+                        // Create a persistent login cookie
+                        HttpCookie cookie = new HttpCookie("FoodFrenzyLogin");
+                        cookie.Values["username"] = txtUsername.Text.Trim();
+                        cookie.Values["userId"] = dt.Rows[0]["UserId"].ToString();
+
+                        // Set the cookie expiration to 7 days
+                        cookie.Expires = DateTime.Now.AddDays(7);
+
+                        // Add the cookie to the response
+                        Response.Cookies.Add(cookie);
+
                         Response.Redirect("Default.aspx");
                     }
                     else
