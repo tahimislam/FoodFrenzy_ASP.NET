@@ -27,7 +27,7 @@ Welcome to FoodFrenzy, an online food ordering website that allows users to expl
 ## Live Website Links
 
 - [Dynamic](https://foodfrenzy16.bsite.net/User/Default.aspx)
-- [Static](https://yourfoodfrenzywebsite.com/admin)
+- [Static](https://tahimislam.github.io/FoodFrenzy_ASP.NET/)
 
 ## Demo Screenshots
 
