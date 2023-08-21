@@ -16,7 +16,7 @@ namespace FoodFrenzy.Admin
                 Session["breadCrum"] = "";
                 if (Session["admin"] == null)
                 {
-                    Response.Redirect("../User/Login.aspx");
+                    Response.Redirect("~/User/Login.aspx");
                 }
             }
         }

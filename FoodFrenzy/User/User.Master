@@ -60,7 +60,7 @@
         
         <div class="hero_area">
     <div class="bg-box">
-      <img src="../All_files/images/hero-bg.jpg" alt="">
+      <img src="../All_files/images/bg-hero1.png" alt="">
     </div>
     <!-- header section strats -->
     <header class="header_section">
@@ -92,9 +92,6 @@
               </li>
             </ul>
             <div class="user_option">
-              <%--<a href="Registration.aspx" class="user_link">
-                <i class="fa fa-user" aria-hidden="true"></i>
-              </a>--%>
                 <asp:LinkButton ID="lbRegisterOrProfile" runat="server" CssClass="user_link" OnClick="lbRegisterOrProfile_Click" CausesValidation="false">
                     <i class="fa fa-user" aria-hidden="true"></i>
                 </asp:LinkButton>

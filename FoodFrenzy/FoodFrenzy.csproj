@@ -87,6 +87,8 @@
     <Content Include="All_Files\images\a.png" />
     <Content Include="All_Files\images\about-img.png" />
     <Content Include="All_Files\images\b.jpg" />
+    <Content Include="All_Files\images\bg-hero.png" />
+    <Content Include="All_Files\images\bg-hero1.png" />
     <Content Include="All_Files\images\c.png" />
     <Content Include="All_Files\images\client1.jpg" />
     <Content Include="All_Files\images\client2.jpg" />

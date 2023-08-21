@@ -24,7 +24,7 @@ namespace FoodFrenzy.Admin
                 Session["breadCrum"] = "Users";
                 if (Session["admin"] == null)
                 {
-                    Response.Redirect("../User/Login.aspx");
+                    Response.Redirect("~/User/Login.aspx");
                 }
                 else
                 {

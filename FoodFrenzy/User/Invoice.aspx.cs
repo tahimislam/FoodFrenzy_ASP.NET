@@ -69,25 +69,37 @@ namespace FoodFrenzy.User
         {
             try
             {
-                string downloadPath = @"D:\Tahim\Tahim 3-1\CSE 3100\Order_invoice.pdf";
-                DataTable dtbl =GetOrderDetails();
+                string downloadPath = Server.MapPath("~/All_Files/Order_invoice.pdf");
+                DataTable dtbl = GetOrderDetails();
                 ExportToPdf(dtbl, downloadPath, "Order Invoice");
 
-                WebClient client = new WebClient();
-                Byte[] bufffer =client.DownloadData(downloadPath);
-                if(bufffer != null )
+                using (WebClient client = new WebClient())
                 {
-                    Response.ContentType = "application/pdf";
-                    Response.AddHeader("content-length", bufffer.Length.ToString());
-                    Response.BinaryWrite(bufffer);
+                    byte[] buffer = client.DownloadData(downloadPath);
+                    if (buffer != null && buffer.Length > 0)
+                    {
+                        Response.Clear();
+                        Response.ContentType = "application/pdf";
+                        Response.AddHeader("content-disposition", "attachment;filename=Order_invoice.pdf");
+                        Response.AddHeader("content-length", buffer.Length.ToString());
+                        Response.BinaryWrite(buffer);
+                        Response.Flush();
+                        Response.End();
+                    }
+                    else
+                    {
+                        lblMsg.Visible = true;
+                        lblMsg.Text = "Error: PDF file download failed.";
+                    }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 lblMsg.Visible = true;
-                lblMsg.Text = "Error Message:- "+ ex.Message.ToString();
+                lblMsg.Text = "Error Message: " + ex.Message;
             }
         }
+
 
         void ExportToPdf(DataTable dtblTable, String strPdfPath, string strHeader)
         {

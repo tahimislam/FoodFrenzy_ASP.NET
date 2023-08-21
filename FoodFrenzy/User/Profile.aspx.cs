@@ -51,7 +51,7 @@ namespace FoodFrenzy.User
                 Session["email"] = dt.Rows[0]["Email"].ToString();
                
                 string imageUrl = dt.Rows[0]["ImageUrl"].ToString();
-                Session["imageUrl"] = !string.IsNullOrEmpty(imageUrl) ? imageUrl : "../Images/Pro_pic.png";
+                Session["imageUrl"] = !string.IsNullOrEmpty(imageUrl) ? imageUrl : "~/Images/Pro_pic.png";
 
                 Session["createdDate"] = dt.Rows[0]["CreatedDate"].ToString();
             }

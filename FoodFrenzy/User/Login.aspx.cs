@@ -62,7 +62,7 @@ namespace FoodFrenzy.User
             if(txtUsername.Text.Trim()=="Admin" && txtPassword.Text.Trim()=="1234")
             {
                 Session["admin"] = txtUsername.Text.Trim();
-                Response.Redirect("../Admin/Dashboard.aspx");
+                Response.Redirect("~/Admin/Dashboard.aspx");
             }
             else
             {

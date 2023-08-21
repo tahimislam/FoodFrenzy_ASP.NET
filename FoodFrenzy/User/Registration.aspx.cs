@@ -139,7 +139,7 @@ namespace FoodFrenzy.User
                 txtAddress.Text = dt.Rows[0]["Address"].ToString();
                 txtPostcode.Text = dt.Rows[0]["PostCode"].ToString();
                 imgUser.ImageUrl = string.IsNullOrEmpty(dt.Rows[0]["ImageUrl"].ToString()) ?
-                    "../Images/Pro_pic.png" : "../" + dt.Rows[0]["ImageUrl"].ToString();
+                    "~/Images/Pro_pic.png" : "~/" + dt.Rows[0]["ImageUrl"].ToString();
                 imgUser.Height = 200;
                 imgUser.Width = 200;
 

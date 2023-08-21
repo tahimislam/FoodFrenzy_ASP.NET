@@ -23,7 +23,7 @@ namespace FoodFrenzy.Admin
                 Session["breadCrum"] = "Category";
                 if (Session["admin"] == null)
                 {
-                    Response.Redirect("../User/Login.aspx");
+                    Response.Redirect("~/User/Login.aspx");
                 }
                 else
                 {
@@ -139,7 +139,7 @@ namespace FoodFrenzy.Admin
                 txtName.Text = dt.Rows[0]["Name"].ToString();
                 cbIsActive.Checked = Convert.ToBoolean(dt.Rows[0]["IsActive"]);
                 imgCategory.ImageUrl = string.IsNullOrEmpty(dt.Rows[0]["ImageUrl"].ToString()) ?
-                    "../Images/No_image.png" : "../" + dt.Rows[0]["ImageUrl"].ToString();
+                    "~/Images/No_image.png" : "~/" + dt.Rows[0]["ImageUrl"].ToString();
                 imgCategory.Height = 200;
                 imgCategory.Width = 200;
                 hdnId.Value = dt.Rows[0]["CategoryId"].ToString();
