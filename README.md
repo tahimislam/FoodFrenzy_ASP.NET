@@ -24,10 +24,13 @@ Welcome to FoodFrenzy, an online food ordering website that allows users to expl
 - HTML, CSS, and JavaScript for website styling and interactivity.
 - .NET Framework (Web Application).
 
-## Live Website Links
+## Demo Video
 
-- [Dynamic](https://foodfrenzy16.bsite.net/User/Default.aspx)
-- [Static](https://tahimislam.github.io/FoodFrenzy_ASP.NET/)
+<div align="center">
+
+https://drive.google.com/file/d/1t-XgRaI2HW7oQ88iDXoM8pnr__muaM9P/view?usp=sharing
+
+</div>
 
 ## Demo Screenshots
 
