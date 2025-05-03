@@ -16,6 +16,20 @@ Welcome to FoodFrenzy, an online food ordering website that allows users to expl
 - Order tracking and real-time status updates.
 - Awesome modern minimalist UI.
 
+
+## Project Architecture Diagram
+
+![Screenshot 2025-05-03 190625](https://github.com/user-attachments/assets/11ebe153-7d63-4e00-bdfe-6cd481d374f9)
+
+![Screenshot 2025-05-03 195233](https://github.com/user-attachments/assets/bc4bd345-a6fd-442f-a9f4-adb4ca83f07b)
+
+
+## Entity-Relationship Diagram (ERD) of Database
+
+
+![Screenshot 2025-05-03 202629](https://github.com/user-attachments/assets/dfe47cf7-f795-4837-92d6-5b3da73b4bff)
+
+
 ## Technology Used
 
 - ASP.NET Web Forms for frontend development.
