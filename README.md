@@ -20,7 +20,6 @@ Welcome to FoodFrenzy, an online food ordering website that allows users to expl
 ## Project Architecture Diagram
 
 ![Screenshot 2025-05-03 190625](https://github.com/user-attachments/assets/11ebe153-7d63-4e00-bdfe-6cd481d374f9)
-
 ![Screenshot 2025-05-03 195233](https://github.com/user-attachments/assets/bc4bd345-a6fd-442f-a9f4-adb4ca83f07b)
 
 
